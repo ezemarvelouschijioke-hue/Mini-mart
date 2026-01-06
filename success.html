@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Successful</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="success-card">
+        <div class="check-icon">✓</div>
+        <h1>Payment Successful</h1>
+        <p>Your order has been confirmed.</p>
+
+        <div class="order-details">
+            <p><strong>Reference:</strong> <span id="ref-number"></span></p>
+        </div>
+
+        <a href="index.html" class="back-btn">Continue Shopping</a>
+    </div>
+</div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("ref-number").innerText =
+        params.get("reference") || "N/A";
+</script>
+
+</body>
+</html>
