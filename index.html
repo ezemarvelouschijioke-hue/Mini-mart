@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MiniStore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+</head>
+<body>
+
+<nav class="navbar">
+    <h1>MiniStore</h1>
+    <button id="open-cart-btn">🛒 Cart (<span id="cart-count">0</span>)</button>
+</nav>
+
+<main class="container">
+    <div class="product-grid"></div>
+</main>
+
+<!-- CART SIDEBAR -->
+<aside id="sidebar-cart" class="cart-sidebar">
+    <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="close-cart-btn">&times;</button>
+    </div>
+
+    <ul class="cart-items"></ul>
+
+    <div class="cart-footer">
+        <p>Total: ₦<span class="total-price">0</span></p>
+        <input type="email" id="email-address" placeholder="Enter your email" required>
+        <button class="checkout-btn" onclick="checkout()">Pay with Paystack</button>
+    </div>
+</aside>
+
+<div id="overlay"></div>
+
+<!-- JS FILES -->
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/payment.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
